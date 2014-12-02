@@ -28,6 +28,14 @@ $(".navToggle").click (function(){
 	new WOW({
 		mobile: false
 	}).init();
+
+	/* ---------------------------------------------------------
+	 *	Github Widget
+	 */
+	
+    $(function () {
+       $('.github-info').githubInfo();
+    });
 	
 	
 	/* ---------------------------------------------------------

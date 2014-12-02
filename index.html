@@ -302,8 +302,8 @@
                     <div class="col-md-4">
 						<li class="lastfm">
 							<a href="#" title="#" class="preview" target="_blank"></a>
-							<span>Music</span>
-							<p>Just listened to <a href="#" title="#" target="_blank">#</a> by <em>#</em>.</p>
+							<span>Twitter</span>
+							<div id="example1"></div>
 						</li>
 					</div>										
 
@@ -353,15 +353,19 @@
     <script src="assets/js/jquery.knob.min.js"></script>
 <!--     // <script src="assets/js/jquery.githubRepoWidget.js"></script>   -->
     <script src="assets/js/github-info-widget.js"></script>
+    <script src="assets/js/twitterFetcher.js"></script>    
     <script src="assets/js/app.js"></script>
-        <script type="text/javascript">
-      $(function () {
-        $('.github-info').githubInfo();
-      });
+    <script>
+
+var config1 = {
+  "id": '539847403545706496',
+  "domId": 'example1',
+  "maxTweets": 1,
+  "enableLinks": true
+};
+twitterFetcher.fetch(config1);
+
     </script>
-
-
-
 </body>
 
 </html>

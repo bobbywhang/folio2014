@@ -192,7 +192,7 @@
 
                     /** Latest commits */
                     var divLatestCommits = '<div class="latest-commits"><div class="wrapper">',
-                        length = data.length;
+                        length = 2;
 
                     for (i = 0; i < length; i++) {
                         divLatestCommits += '<div class="commit ' + (i % 2 ? 'even' : 'odd') + '">' +
