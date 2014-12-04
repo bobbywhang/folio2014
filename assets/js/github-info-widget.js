@@ -185,7 +185,7 @@
 
                         diff = dayNumber(today) - dayNumber(day);
                         if (diff < settings.timespan) {
-                            commits[diff] += 1;
+                            commits[diff] += 2;
                         }
                     }
 
