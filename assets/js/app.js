@@ -169,18 +169,20 @@ $(".navToggle").click (function(){
 	$.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=thewhangsta&api_key=1a8e56323649278c20e3e192f8edca5b&limit=1&format=json&callback=?', function(data) {
 
 			var track = data.recenttracks.track[0];
+			console.log(data);
 
 			if (!data.recenttracks.track[0]) {
 				track = data.recenttracks.track;
 			}
 
 			var	artist  = track.artist['#text'],
+				album	= track.album['#text'],
 				song 	= track.name,
 				url 	= track.url,
 				src 	= track.image[3]['#text'];
 
 			if (src == '' || src == null || src == 'undefined') {
-				src = 'http://joao.pt/wp-content/themes/joaoramos/img/music.jpg';
+				src = '';
 			}
 
 			$('li.lastfm').find('.preview')
@@ -194,7 +196,14 @@ $(".navToggle").click (function(){
 					'href': 	url,
 					'title': 	artist
 				})
-				.siblings('em').html(artist);
+				.siblings('em').html(artist)
+				.attr({
+					// 'href': 	url,
+					// 'title': 	artist,
+					'album': 	album
+				})
+				.siblings('i').html(album);				
+
 
 		});
 	

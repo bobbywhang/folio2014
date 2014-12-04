@@ -20,7 +20,7 @@ var twitterFetcher = function() {
   var supportsClassName = true;
   var showRts = true;
   var customCallbackFunction = null;
-  var showInteractionLinks = true;
+  var showInteractionLinks = false;
   var showImages = false;
   var lang = 'en';
 
@@ -220,28 +220,28 @@ var twitterFetcher = function() {
           //       '</div>';
           // }
           op += '<p class="tweet">' + strip(tweets[n].innerHTML) + '</p>';
-          if (printTime) {
-            op += '<p class="timePosted">' +
-                times[n].getAttribute('aria-label') + '</p>';
-          }
+          // if (printTime) {
+          //   op += '<p class="timePosted">' +
+          //       times[n].getAttribute('aria-label') + '</p>';
+          // }
         } else {
           if (tweets[n].innerText) {
             // if (printUser) {
             //   op += '<p class="user">' + authors[n].innerText + '</p>';
             // }
             op += '<p class="tweet">' +  tweets[n].innerText + '</p>';
-            if (printTime) {
-              op += '<p class="timePosted">' + times[n].innerText + '</p>';
-            }
+            // if (printTime) {
+            //   op += '<p class="timePosted">' + times[n].innerText + '</p>';
+            // }
 
           } else {
             // if (printUser) {
             //   op += '<p class="user">' + authors[n].textContent + '</p>';
             // }
             op += '<p class="tweet">' +  tweets[n].textContent + '</p>';
-            if (printTime) {
-              op += '<p class="timePosted">' + times[n].textContent + '</p>';
-            }
+            // if (printTime) {
+            //   op += '<p class="timePosted">' + times[n].textContent + '</p>';
+            // }
           }
         }
         // if (showInteractionLinks) {

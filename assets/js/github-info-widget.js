@@ -151,9 +151,9 @@
                     updatedPar += updatedAgo + '</p>';
                     createdPar += createdAgo + '</p>';
 
-                    wrapper.append('<div class="activity">' +
-                        '<p class="history">' +
-                        '<span class="emphasis">Commit history</span><span class="sparkline"></span>');
+                    // wrapper.append('<div class="activity">' +
+                    //     '<p class="history">' +
+                    //     '<span class="emphasis">Commit history</span><span class="sparkline"></span>');
                 }
             });
 
@@ -192,7 +192,7 @@
 
                     /** Latest commits */
                     var divLatestCommits = '<div class="latest-commits"><div class="wrapper">',
-                        length = 2;
+                        length = 1;
 
                     for (i = 0; i < length; i++) {
                         divLatestCommits += '<div class="commit ' + (i % 2 ? 'even' : 'odd') + '">' +
