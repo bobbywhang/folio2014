@@ -151,9 +151,9 @@
                     updatedPar += updatedAgo + '</p>';
                     createdPar += createdAgo + '</p>';
 
-                    wrapper.append('<div class="activity">' +
-                        '<p class="history">' +
-                        '<span class="emphasis">Commit history</span><span class="sparkline"></span>');
+                    // wrapper.append('<div class="activity">' +
+                    //     '<p class="history">' +
+                    //     '<span class="emphasis">Commit history</span><span class="sparkline"></span>');
                 }
             });
 
@@ -185,14 +185,14 @@
 
                         diff = dayNumber(today) - dayNumber(day);
                         if (diff < settings.timespan) {
-                            commits[diff] += 1;
+                            commits[diff] += 2;
                         }
                     }
 
 
                     /** Latest commits */
                     var divLatestCommits = '<div class="latest-commits"><div class="wrapper">',
-                        length = data.length;
+                        length = 1;
 
                     for (i = 0; i < length; i++) {
                         divLatestCommits += '<div class="commit ' + (i % 2 ? 'even' : 'odd') + '">' +

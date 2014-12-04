@@ -1847,3 +1847,20 @@ img.img-responsive.about-img {
 border-radius: 50%;
 }
 
+
+h4.social-icons {
+font-size: 2.6em;
+border-bottom: 1px solid #898989;
+padding-bottom: 0.2em;
+text-align: center;
+}
+
+.social-icons-list {
+  list-style-type:none;
+}
+
+.social-icons-list h5{
+  font-weight:bold;
+  padding-top:1em;
+
+}
