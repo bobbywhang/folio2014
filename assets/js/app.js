@@ -1,5 +1,6 @@
 $(function () {
 	// "use strict";
+
 	
 $(".navToggle").click (function(){
   $(this).toggleClass("open");
@@ -16,9 +17,9 @@ $(".navToggle").click (function(){
 	 *	Background
 	 */
 	
-	$.backstretch([
-		"assets/img/background/1.jpg"
-	], {duration: 3800, fade: 1500});
+	// $.backstretch([
+	// 	"assets/img/background/1.jpg"
+	// ], {duration: 3800, fade: 1500});
 	
 	
 	/* ---------------------------------------------------------
@@ -42,51 +43,51 @@ $(".navToggle").click (function(){
 	 *	Knob
 	 */
 	
-	$(".dial").knob({
-		 draw : function () {
+	// $(".dial").knob({
+	// 	 draw : function () {
 
-			// "tron" case
-			if(this.$.data('skin') == 'tron') {
+	// 		// "tron" case
+	// 		if(this.$.data('skin') == 'tron') {
 
-				var a = this.angle(this.cv)  		// Angle
-					, sa = this.startAngle          // Previous start angle
-					, sat = this.startAngle         // Start angle
-					, ea                            // Previous end angle
-					, eat = sat + a                 // End angle
-					, r = true;
+	// 			var a = this.angle(this.cv)  		// Angle
+	// 				, sa = this.startAngle          // Previous start angle
+	// 				, sat = this.startAngle         // Start angle
+	// 				, ea                            // Previous end angle
+	// 				, eat = sat + a                 // End angle
+	// 				, r = true;
 
-				this.g.lineWidth = this.lineWidth;
+	// 			this.g.lineWidth = this.lineWidth;
 
-				this.o.cursor
-					&& (sat = eat - 0.3)
-					&& (eat = eat + 0.3);
+	// 			this.o.cursor
+	// 				&& (sat = eat - 0.3)
+	// 				&& (eat = eat + 0.3);
 
-				if (this.o.displayPrevious) {
-					ea = this.startAngle + this.angle(this.value);
-					this.o.cursor
-						&& (sa = ea - 0.3)
-						&& (ea = ea + 0.3);
-					this.g.beginPath();
-					this.g.strokeStyle = this.previousColor;
-					this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sa, ea, false);
-					this.g.stroke();
-				}
+	// 			if (this.o.displayPrevious) {
+	// 				ea = this.startAngle + this.angle(this.value);
+	// 				this.o.cursor
+	// 					&& (sa = ea - 0.3)
+	// 					&& (ea = ea + 0.3);
+	// 				this.g.beginPath();
+	// 				this.g.strokeStyle = this.previousColor;
+	// 				this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sa, ea, false);
+	// 				this.g.stroke();
+	// 			}
 
-				this.g.beginPath();
-				this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
-				this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sat, eat, false);
-				this.g.stroke();
+	// 			this.g.beginPath();
+	// 			this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
+	// 			this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sat, eat, false);
+	// 			this.g.stroke();
 
-				this.g.lineWidth = 2;
-				this.g.beginPath();
-				this.g.strokeStyle = this.o.fgColor;
-				this.g.arc(this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
-				this.g.stroke();
+	// 			this.g.lineWidth = 2;
+	// 			this.g.beginPath();
+	// 			this.g.strokeStyle = this.o.fgColor;
+	// 			this.g.arc(this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+	// 			this.g.stroke();
 
-				return false;
-			}
-		}
-	});
+	// 			return false;
+	// 		}
+	// 	}
+	// });
 	
 	
 	/* ---------------------------------------------------------
@@ -165,6 +166,15 @@ $(".navToggle").click (function(){
 	// 		});
 	// 	}
 	// });
+
+		var config1 = {
+		  "id": '539847403545706496',
+		  "domId": 'example1',
+		  "maxTweets": 1,
+		  "enableLinks": true
+		};
+		twitterFetcher.fetch(config1);
+
 
 	$.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=thewhangsta&api_key=1a8e56323649278c20e3e192f8edca5b&limit=1&format=json&callback=?', function(data) {
 
