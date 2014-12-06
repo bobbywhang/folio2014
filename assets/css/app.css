@@ -23,7 +23,7 @@ body {
   background: #2c2c2c;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1.5em;
   color: #fff;
   line-height: 1.6em;
   padding-left: 0 !important;
@@ -702,38 +702,32 @@ nav ul li a {
   -moz-user-select: none;
   user-select: none;
 }
-.pace .pace-progress {
-  display: block;
-  position: fixed;
-  z-index: 5000;
-  top: 0;
-  left: 0;
-  height: 8px;
-  background-color: #fff;
-  -webkit-transition: -webkit-transform 0.3s, width 1s;
-  -moz-transition: width 1s;
-  -o-transform: width 1s;
-  transition: transform .3s, width 1s;
-  pointer-events: none;
-}
-.pace .pace-active .pace-progress {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-.pace .pace-activity:before {
-  content: '';
-  background-color: #202020;
-  background-image: url('../img/logo/logo.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: block;
-  z-index: 4000;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}
-.pace-done .pace {
+
+.pace.pace-inactive .pace-progress {
   display: none;
+}
+
+.pace .pace-progress {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 0;
+  height: 5rem;
+  width: 5rem;
+}
+
+.pace .pace-progress:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  content: attr(data-progress-text);
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 100;
+  font-size: 8rem;
+  line-height: 1;
+  text-align: right;
+  color: rgba(255,255,255,0.5);
 }
 /* ---------------------------------------------------------
  *	Tubular
