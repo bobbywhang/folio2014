@@ -1,7 +1,7 @@
 $(function() {
     // "use strict";
 
-
+    // hamburger nav
     $(".navToggle").click(function() {
         $(this).toggleClass("open");
         $("nav").toggleClass("open");
@@ -20,6 +20,7 @@ $(function() {
     // $.backstretch([
     // 	"assets/img/background/1.jpg"
     // ], {duration: 3800, fade: 1500});
+
     //jQuery to collapse the navbar on scroll
     $(window).scroll(function() {
         if ($(".navToggle").offset().top > 50) {

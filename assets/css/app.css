@@ -170,11 +170,12 @@ a:after {
   background-color: rgba(0, 0, 0, 0.6);
 }
 .section-title {
-  margin: 0 0 20px;
-  text-align: center;
-  font-size: 2em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+margin: 0 0 2em;
+text-align: center;
+font-size: 2em;
+letter-spacing: 1px;
+text-transform: uppercase;
+font-weight: 600;
 }
 .section-title-border {
   width: 70px;
@@ -673,6 +674,9 @@ nav ul li a {
   border: 0;
   background: none;
   left: 0;
+}
+.bx-viewport {
+  height:100% !important;
 }
 .section-solid .bx-wrapper .bx-pager.bx-default-pager a {
   border-radius: 0;
