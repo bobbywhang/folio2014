@@ -7,19 +7,9 @@ $(function() {
         $("nav").toggleClass("open");
     });
 
-    function getGridSize() {
-        return (Modernizr.mq('(max-width:490px)')) ? 1 :
-            (Modernizr.mq('(max-width:705px)')) ? 2 :
-            (Modernizr.mq('(max-width:768px)')) ? 3 : 4;
-    }
-
     /* ---------------------------------------------------------
-     *	Background
+     *	Nav Scroll
      */
-
-    // $.backstretch([
-    // 	"assets/img/background/1.jpg"
-    // ], {duration: 3800, fade: 1500});
 
     //jQuery to collapse the navbar on scroll
     $(window).scroll(function() {
@@ -90,7 +80,8 @@ $(function() {
     $.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=thewhangsta&api_key=1a8e56323649278c20e3e192f8edca5b&limit=1&format=json&callback=?', function(data) {
 
         var track = data.recenttracks.track[0];
-        console.log(data);
+        // to view all data
+        // console.log(data);
 
         if (!data.recenttracks.track[0]) {
             track = data.recenttracks.track;
@@ -130,52 +121,11 @@ $(function() {
 
 
     /* ---------------------------------------------------------
-     *	Portfolio
+     *	Portfolio grid
      */
 
-    var $grid = $('#portfolio-container');
-
-    $grid.imagesLoaded(function() {
-        $grid.shuffle({
-            itemSelector: '.portfolio-item',
-            speed: 450
-        });
-
-        $('#filter a').click(function(e) {
-            e.preventDefault();
-
-            // set active class
-            $('#filter a').removeClass('active');
-            $(this).addClass('active');
-
-            // get group name from clicked item
-            var groupName = $(this).attr('data-group');
-
-            // reshuffle grid
-            $grid.shuffle('shuffle', groupName);
-        });
-    });
-
-    /* ---------------------------------------------------------
-     *	GITheWall
-     */
-
-    $('.GITheWall').GITheWall({
-        nextButtonClass: 'fa fa-chevron-right',
-        prevButtonClass: 'fa fa-chevron-left',
-        closeButtonClass: 'fa fa-times',
-        dynamicHeight: false,
-        onShow: function() {
-            $("#portfolio-container").slideDown(300).fadeOut(300);
-            $(".filter-tags").slideDown(300).fadeOut(300);
-            $("#portfolio-more").slideDown(300).fadeOut(300);
-        },
-        onHide: function() {
-            $("#portfolio-container").slideUp(300).fadeIn(300);
-            $(".filter-tags").slideUp(300).fadeIn(300);
-            $("#portfolio-more").slideUp(300).fadeIn(300);
-        }
-    });
-
+            $(function() {
+                Grid.init();
+            });
 
 });

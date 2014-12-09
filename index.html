@@ -12,8 +12,6 @@
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/font-mfizz.css" rel="stylesheet">
-    <link href="assets/css/ladda-themeless.min.css" rel="stylesheet">
-    <link href="assets/css/jquery.bxslider.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/scrolling-nav.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -32,7 +30,8 @@
         <![endif]-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.js"></script>
-    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+
 </head>
 
 <body>
@@ -77,170 +76,74 @@
 
     <!-- Portfolio -->
     <section id="portfolio" class="section section-solid">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h2 class="section-title">Featured Work</h2>
-                </div>
-            </div>
-            <div class="row wow fadeInDown" data-wow-duration="0.7s" data-wow-delay="0s">
-                <div class="col-sm-12 text-center">
-                    <ul id="filter" class="list-inline filter-tags">
-                        <li><a href="#" class="btn btn-sm btn-theme-inverse active" data-group="all">All</a>
-                        </li>
-                        <li><a href="#" class="btn btn-sm btn-theme-inverse" data-group="branding">Branding</a>
-                        </li>
-                        <li><a href="#" class="btn btn-sm btn-theme-inverse" data-group="web">Web</a>
-                        </li>
-                        <li><a href="#" class="btn btn-sm btn-theme-inverse" data-group="app">App</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="portfolio-container">
+            <div class="main-portfolio">
+                <ul id="og-grid" class="og-grid">
+                    <li>
+                        <a blank="_target" href="http://castlemain.com" data-largesrc="assets/img/portfolio/large/cmg-lg.jpg" data-title="Castlemain Group" data-description="Worked as the lead UI Designer and Front-End Developer for Castlemain, which specializes in working with First Nations to enhance their economic and social standing across Canada. I lead the design and development of various client websites built with custom Wordpress themes.">
+                            <img src="assets/img/portfolio/small/cmg-sm.jpg" alt="Castlemain Group" />
+                        </a>
+                    </li>
+                     <li>
+                        <a href="http://canucks.com" blank="_target" data-largesrc="assets/img/portfolio/large/cdc-lg.jpg" data-title="Canucks Sports and Entertainment" data-description="Worked as the Website Coordinator with the web department for the Vancouver Canucks. I was responsible for the front-end design and developement of canucks.com and rogersareana.com. I also managed online anayltics and made decisions on how to best maximize the website for continued growth in traffic and engagement.">
+                            <img src="assets/img/portfolio/small/cdc-sm.jpg" alt="Canucks Sports and Entertainment" />
+                        </a>
+                    </li>
+                     <li>
+                        <a href="http://bestbuy.ca" blank="_target" data-largesrc="assets/img/portfolio/large/bb-lg.jpg" data-title="Best Buy Canada" data-description="Worked as a UI Designer at the corporate head office of Best Buy Canada. Worked closely with E-commerce managers to launch and maintain the non-core Discover More section.">
+                            <img src="assets/img/portfolio/small/bb-sm.jpg" alt="Best Buy Canada" />
+                        </a>
+                    </li> 
+                     <li>
+                        <a href="http://rew.ca" blank="_target" data-largesrc="assets/img/portfolio/large/rew-lg.jpg" data-title="Real Estate Weekly" data-description="Worked as UI Designer ar Real Estate Weekly. Was a member of the web team responsible for the visual design and front-end development of their newly launched website and mobile app.">
+                            <img src="assets/img/portfolio/small/rew-sm.jpg" alt="Real Estate Weekly" />
+                        </a>
+                    </li>  
+                     <li>
+                        <a href="http://bcfnlp.ca" blank="_target" data-largesrc="assets/img/portfolio/large/fnlp-lg.jpg" data-title="First Nations Limited Partnership" data-description="Designed and developed a custom Wordpress website for the First Nations Limited Partnership under the Castlemain brand.">
+                            <img src="assets/img/portfolio/small/fnlp-sm.jpg" alt="First Nations Limited Partnership" />
+                        </a>
+                    </li>  
+                     <li>
+                        <a href="http://www.fnss.coppermoontest.ca/" blank="_target" data-largesrc="assets/img/portfolio/large/fnss-lg.jpg" data-title="North Coast-Skeena First Nations Stewardship Society" data-description="Designed and developed a custom Wordpress website for the North Coast-Skeena First Nations Stewardship Society under the Castlemain brand.">
+                            <img src="assets/img/portfolio/small/fnss-sm.jpg" alt="North Coast-Skeena First Nations Stewardship Society" />
+                        </a>
+                    </li>            
+                    <li>
+                        <a href="http://www.splitrockenvironmental.ca/" blank="_target" data-largesrc="assets/img/portfolio/large/sre-lg.jpg" data-title="Splitrock Environmental" data-description="Designed and developed a custom Wordpress website for Splitrock Environmental under the Castlemain brand.">
+                            <img src="assets/img/portfolio/small/sre-sm.jpg" alt="Splitrock Environmental" />
+                        </a>
+                    </li>   
+                    <li>
+                        <a href="http://i.imgur.com/5im6Dd3.png" blank="_target" data-largesrc="assets/img/portfolio/large/fish-lg.jpg" data-title="First Nations Economic Database Development Database" data-description="Designed and developed a custom Wordpress website for Splitrock Environmental under the Castlemain brand.">
+                            <img src="assets/img/portfolio/small/fish-sm.jpg" alt="First Nations Economic Database Development Database" />
+                        </a>
+                    </li>    
+                    <li>
+                        <a href="http://uppernicola.com" blank="_target" data-largesrc="assets/img/portfolio/large/unb-lg.jpg" data-title="Upper Nicola Indian Band" data-description="Designed and developed a custom Wordpress website for the Upper Nicola Band under the Castlemain brand. Also designed and illustrated their new logo.">
+                            <img src="assets/img/portfolio/small/unb-sm.jpg" alt="Upper Nicola Indian Band" />
+                        </a>
+                    </li>  
+                    <li>
+                        <a href="http://issuu.com/coppermoon/docs/ar_final_web" blank="_target" data-largesrc="assets/img/portfolio/large/tcc-lg.jpg" data-title="Tahltan Central Council 2014 Annual Report" data-description="Designed the 2014 Annual Report for the Tahltan Central Council and layed it out in InDesign.">
+                            <img src="assets/img/portfolio/small/tcc-sm.jpg" alt="Tahltan Central Council 2014 Annual Report" />
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="http://www.playmakersskill.com/" blank="_target" data-largesrc="assets/img/portfolio/large/bball-lg.jpg" data-title="PlayMakers Basketball" data-description="Designed and developed a custom Wordpress website for PlayMakers Basketball.">
+                            <img src="assets/img/portfolio/small/bball-sm.jpg" alt="PlayMakers Basketball" />
+                        </a>
+                    </li>  
+                    <li>
+                        <a href="http://www.lickerishlounge.com/" blank="_target" data-largesrc="assets/img/portfolio/large/lickerish-lg.jpg" data-title="Lickerish Lounge" data-description="Designed and developed a custom Wordpress website for Lickerish Lounge.">
+                            <img src="assets/img/portfolio/small/lickerish-sm.jpg" alt="Lickerish Lounge" />
+                        </a>
+                    </li>        
+                    
+                </ul>
+
             </div>
         </div>
-        <div class="GITheWall">
-            <ul id="portfolio-container" class="text-center wow fadeInDown" data-wow-duration="0.7s" data-wow-delay="0s">
-                <li class="portfolio-item" data-groups='["all", "branding", "web"]' data-contenttype="ajax" data-href="assets/ajax/1.html">
-                    <figure>
-                        <div class="portfolio-img">
-                            <a href="#" class="overlay">
-                                <span class="title">Castlemain</span>
-                                <span class="category">Lead UI Designer & Developer</span>
-                            </a>
-                            <img src="assets/img/portfolio/cmg1.jpg" alt="" class="img-responsive">
-                        </div>
-                    </figure>
-                </li>
-                <li class="portfolio-item" data-groups='["all", "web"]' data-contenttype="ajax" data-href="assets/ajax/2.html">
-                    <figure>
-                        <div class="portfolio-img">
-                            <a href="#" class="overlay">
-                                <span class="title">Canucks Sports & Entertainment</span>
-                                <span class="category">Website Coordinator</span>
-                            </a>
-                            <img src="assets/img/portfolio/cdc1.jpg" alt="" class="img-responsive">
-                        </div>
-                    </figure>
-                </li>
-                <li class="portfolio-item" data-groups='["all", "web"]' data-contenttype="ajax" data-href="assets/ajax/3.html">
-                    <figure>
-                        <div class="portfolio-img">
-                            <a href="#" class="overlay">
-                                <span class="title">Best Buy</span>
-                                <span class="category">UI Designer</span>
-                            </a>
-                            <img src="assets/img/portfolio/bestbuy1.jpg" alt="" class="img-responsive">
-                        </div>
-                    </figure>
-                </li>
-                <li class="portfolio-item" data-groups='["all", "web"]' data-contenttype="ajax" data-href="assets/ajax/4.html">
-                    <figure>
-                        <div class="portfolio-img">
-                            <a href="#" class="overlay">
-                                <span class="title">Real Estate Weekly</span>
-                                <span class="category">UI Designer</span>
-                            </a>
-                            <img src="assets/img/portfolio/rew1.jpg" alt="" class="img-responsive">
-                        </div>
-                    </figure>
-                </li>
-                <li class="portfolio-item" data-groups='["all", "web", "branding"]' data-contenttype="ajax" data-href="assets/ajax/5.html">
-                    <figure>
-                        <div class="portfolio-img">
-                            <a href="#" class="overlay">
-                                <span class="title">First Nations Limited Partnership</span>
-                                <span class="category">web</span>
-                            </a>
-                            <img src="assets/img/portfolio/fnlp1.jpg" alt="" class="img-responsive">
-                        </div>
-                    </figure>
-                </li>
-                <li class="portfolio-item" data-groups='["all", "web"]' data-contenttype="ajax" data-href="assets/ajax/6.html">
-                    <figure>
-                        <div class="portfolio-img">
-                            <a href="#" class="overlay">
-                                <span class="title">North Coast-Skeena First Nations Stewardship Society</span>
-                                <span class="category">app</span>
-                            </a>
-                            <img src="assets/img/portfolio/fnss2.jpg" alt="" class="img-responsive">
-                        </div>
-                    </figure>
-                </li>
-                <li class="portfolio-item" data-groups='["all", "branding", "web"]' data-contenttype="ajax" data-href="assets/ajax/7.html">
-                    <figure>
-                        <div class="portfolio-img">
-                            <a href="#" class="overlay">
-                                <span class="title">Upper Nicola Indian Band</span>
-                                <span class="category">branding</span>
-                            </a>
-                            <img src="assets/img/portfolio/unb1.jpg" alt="" class="img-responsive">
-                        </div>
-                    </figure>
-                </li>
-                <li class="portfolio-item" data-groups='["all", "web"]' data-contenttype="ajax" data-href="assets/ajax/8.html">
-                    <figure>
-                        <div class="portfolio-img">
-                            <a href="#" class="overlay">
-                                <span class="title">Splitrock Environmental</span>
-                                <span class="category">web</span>
-                            </a>
-                            <img src="assets/img/portfolio/sre1.jpg" alt="" class="img-responsive">
-                        </div>
-                    </figure>
-                </li>
-                <li class="portfolio-item" data-groups='["all", "branding"]' data-contenttype="ajax" data-href="assets/ajax/9.html">
-                    <figure>
-                        <div class="portfolio-img">
-                            <a href="#" class="overlay">
-                                <span class="title">First Nations Economic Database Development Database</span>
-                                <span class="category">Branding</span>
-                            </a>
-                            <img src="assets/img/portfolio/salmonvector1.jpg" alt="" class="img-responsive">
-                        </div>
-                    </figure>
-                </li>
-                <li class="portfolio-item" data-groups='["all", "branding"]' data-contenttype="ajax" data-href="assets/ajax/10.html">
-                    <figure>
-                        <div class="portfolio-img">
-                            <a href="#" class="overlay">
-                                <span class="title">Tahltan Central Council 2014 Annual Report</span>
-                                <span class="category">branding</span>
-                            </a>
-                            <img src="assets/img/portfolio/tcc1.jpg" alt="" class="img-responsive">
-                        </div>
-                    </figure>
-                </li>
-                <li class="portfolio-item" data-groups='["all", "web"]' data-contenttype="ajax" data-href="assets/ajax/11.html">
-                    <figure>
-                        <div class="portfolio-img">
-                            <a href="#" class="overlay">
-                                <span class="title">PlayMakers Basketball</span>
-                                <span class="category">web</span>
-                            </a>
-                            <img src="assets/img/portfolio/playmakers1.jpg" alt="" class="img-responsive">
-                        </div>
-                    </figure>
-                </li>
-                <li class="portfolio-item" data-groups='["all", "web"]' data-contenttype="ajax" data-href="assets/ajax/12.html">
-                    <figure>
-                        <div class="portfolio-img">
-                            <a href="#" class="overlay">
-                                <span class="title">Lickerish Lounge</span>
-                                <span class="category">web</span>
-                            </a>
-                            <img src="assets/img/portfolio/lickerish1.jpg" alt="" class="img-responsive">
-                        </div>
-                    </figure>
-                </li>
-            </ul>
-        </div>
-        <!--         <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <a href="#" class="btn btn-theme-inverse mt40 wow fadeInDown" data-wow-duration="0.7s" data-wow-delay="0.5s" id="portfolio-more">More</a>
-                </div>
-            </div>
-        </div> -->
     </section>
 
     <!-- About -->
@@ -333,14 +236,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="assets/js/ladda.min.js"></script>
- <!--    // <script src="assets/js/retina.min.js"></script> -->
-    <script src="assets/js/masonry.pkgd.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/jquery.shuffle.min.js"></script>
-    <script src="assets/js/jquery.bxslider.min.js"></script>
     <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jQuery.GI.TheWall.min.js"></script>
     <script src="assets/js/jquery.simple-text-rotator.min.js"></script>
     <script src="assets/js/jquery.throttledresize.js"></script>
     <!-- reveal content when you scroll -->
@@ -350,8 +247,11 @@
     <!-- API librarys -->
     <script src="assets/js/github-info-widget.js"></script>
     <script src="assets/js/twitterFetcher.js"></script>
+    <script src="assets/js/grid.js"></script>
     <!-- custom css -->
     <script src="assets/js/app.js"></script>
+    <script>
+    </script>
 </body>
 
 </html>
