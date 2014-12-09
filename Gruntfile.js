@@ -21,7 +21,15 @@ module.exports = function(grunt) {
       dist: {
         // The files to concatenate:
         // Notice the wildcard, which is automatically expanded.
-        src: ['assets/js/*.js'],
+        src: ['assets/js/jquery.shuffle.min.js',
+              'assets/js/waypoints.min.js',
+              'assets/js/jquery.simple-text-rotator.min.js',
+              'assets/js/jquery.throttledresize.js',
+              'assets/js/wow.min.js',
+              'assets/js/jquery.easing.min.js',
+              'assets/js/github-info-widget.js',
+              'assets/js/twitterFetcher.js'
+        ],
         // The destination file:
         // Notice the angle-bracketed ERB-like templating,
         // which allows you to reference other properties.
