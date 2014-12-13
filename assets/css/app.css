@@ -1128,8 +1128,9 @@ border-radius: 50%;
 }
 
 .main p {
-font-size: 2em;
+font-size: 1.8em;
 margin-top: 1.5em;
+color: #49BEED;
 }
 
 .main h1 span {
